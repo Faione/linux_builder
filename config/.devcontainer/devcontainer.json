@@ -1,0 +1,17 @@
+{
+    "name": "kernel-devel",
+    "image": "docker.io/faione/kernel-builder:clang-gdb-bookworm-slim",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/bash"
+            },
+            "extensions": [
+                "llvm-vs-code-extensions.vscode-clangd",
+                "coolchyni.beyond-debug",
+                "rust-lang.rust-analyzer"
+            ]
+        }
+    },
+    "containerUser": "root"
+}
