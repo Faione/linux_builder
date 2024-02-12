@@ -12,7 +12,8 @@
             "cwd": "${workspaceRoot}",
             "remote": {
                 "enabled": true,
-                "address": "host.containers.internal:1234"
+                // "address": "host.containers.internal:1234"
+                "address": "localhost:1234"
             }
         }
     ]

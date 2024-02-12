@@ -1,6 +1,13 @@
 {
     "name": "kernel-devel",
     "image": "docker.io/faione/kernel-builder:clang-gdb-bookworm-slim",
+    "runArgs": [
+        // WSL2 using localhost as proxy server, add this in container to avoid extentions installation failure
+        "--network=host"
+    ],
+    "onCreateCommand": {
+        "config_gdb": "mkdir -p /root/.config/gdb/ && echo 'set auto-load safe-path /' > /root/.config/gdb/gdbinit"
+    },
     "customizations": {
         "vscode": {
             "settings": {
